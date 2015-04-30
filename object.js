@@ -32,3 +32,4 @@ function createBeer(name, style){
 
 var beer1 = createBeer("Castle", "Stout");
 var beer2 = createBeer("Surf", "Lager");
+
