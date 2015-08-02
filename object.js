@@ -1,10 +1,13 @@
-//In ECMA-262, objects are defined as unordered arrays
+//In ECMA-262, objects are defined as unordered arrays which contain primitive data types that are stored as a series of name-value pairs
 
 //Early object notation with the Object constructor
 var beer = new Object();
+
+// "name" and "style" are both called properties of beer
 beer.name = "PaleFish";
 beer.style = "IPA";
 
+// "sayName" is a method of beer
 beer.sayName = function() {
 	alert(this.name);
 }
@@ -32,6 +35,35 @@ function createBeer(name, style){
 
 var beer1 = createBeer("Castle", "Stout");
 var beer2 = createBeer("Surf", "Lager");
+
+// The one complex, mutable data type that JavaScript has is the Object data type
+
+// Object data types store values by reference
+var puppy = {name: "Avett"};
+var anotherPuppy = puppy;
+puppy.name = "Pip";
+
+console.log(anotherPuppy.name);
+console.log(puppy.name);
+
+// Each data property in a object contains the name-value pair and three other attributes (all set to true by default)
+
+// Writable - specifies whether the property can be modified
+// Configurable - specifies whether or not the property attributes can be changed or the properties themselves deleted
+// Enumberable - specifies whether the property can be returned in an if/for loop
+
+
+// JavaScript has five primitive, immutable data types: Number, String, Boolean, Undefined, and Null
+
+// Primitive data types are stored by value
+var puppy = "Avett";
+var anotherPuppy = "Pip";
+puppy = "Tuck";
+
+console.log(anotherPuppy);
+console.log(puppy);
+
+
 
 // Prototypes determine properties and methods that associated objects inherit from
 
