@@ -1,0 +1,14 @@
+{
+  "name": "lodash_tutorial",
+  "description": "Programming exercise: Implement lodash",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "lodash": "^*",
+    "express": "^4.12.2",
+    "body-parser": "^1.13.2",
+    "method-override": "^2.3.3"
+  },
+  "devDependencies": {},
+  "main": "lodash_tutorial_server.js"
+}
