@@ -1,0 +1,40 @@
+/* This file is written using SCSS (Sassy CSS) syntax, which uses
+brackets and semicolons unlike traditional SASS syntax. */
+/* Sass supports variables just like a traditional programming language */
+p {
+  font-family: "Lucida Console", Monaco, monospace;
+  color: #001f3f; }
+
+/* Sass allows nesting CSS selectors, although too much nesting is considered bad practice */
+ul #green {
+  background-color: #2ECC40; }
+ul #yellow {
+  background-color: #FFDC00; }
+ul #blue {
+  background-color: #0074D9; }
+  ul #blue p {
+    color: #FF851B; }
+
+/* Sass allows you to import "partial" Sass files for greater file modularity */
+/* This is a partial SASS file to be imported into sass_tutorial.scss */
+h5 {
+  font-weight: normal; }
+
+/* Mixins behave like arrays of css rules and behave best when you want to call them with arguments */
+/* Call a mixin with @include */
+.bordered {
+  border: 2px solid;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  border-radius: 5px; }
+
+/* When arguments don't need to be applied to a block of css rules, use extension/inheritance */
+.msg-header, .msg-child {
+  font-family: Impact, Charcoal, sans-serif;
+  color: #001f3f; }
+
+.msg-child {
+  color: #2ECC40; }
+
+/*# sourceMappingURL=sass_tutorial.css.map */
