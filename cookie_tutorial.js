@@ -49,14 +49,14 @@ cookieView.prototype.updateCookieCounter = function () {
 
 	// If counter cookie does exist, increment current value
 	} else {
-		alert("here");
+
 		// Retrieve current value of counter cookie via regex match
 		var cookieMatchStr = document.cookie;
+
 		var cookieMatch = cookieMatchStr.match( /counter=([0-9]*);/i );
-		alert(cookieMatch[0]);
+
 		// Assign current count to first matching group of regex
-		var cookieCounterValue = cookieMatch[0];
-		alert("here3" + cookieCounterValue);
+		var cookieCounterValue = cookieMatch[1];
 
 		// Increment and update counter cookie
 		cookieCounterValue++;
