@@ -1,5 +1,9 @@
-/* This file is written using SCSS (Sassy CSS) syntax, which uses
-brackets and semicolons unlike traditional SASS syntax. */
+/* 
+*  Sass is a CSS preprocessor with features to help manage large stylesheets.
+*  There are two ways to write Sass: traditional Sass syntax and SCSS (Sassy CSS).
+*  This file is written using SCSS, which uses brackets and semicolons similar to 
+*  traditional CSS syntax.  
+*/
 /* Sass supports variables just like a traditional programming language */
 p {
   font-family: "Lucida Console", Monaco, monospace;
@@ -20,7 +24,7 @@ ul #blue {
 h5 {
   font-weight: normal; }
 
-/* Mixins behave like arrays of css rules and behave best when you want to call them with arguments */
+/* Mixins behave like arrays of css rules and are utilized most effectively when you call them with variable arguments */
 /* Call a mixin with @include */
 .bordered {
   border: 2px solid;
