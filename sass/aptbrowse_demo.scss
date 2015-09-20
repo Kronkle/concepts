@@ -1,0 +1,12 @@
+/*
+ *  For styling AptBrowse demo page. Sass syntax: SCSS
+ */
+
+$center: 0 auto;
+$block-width: 600px;
+
+header, footer {
+	width:  $block-width;
+	margin: $center;
+	text-align: center;
+}

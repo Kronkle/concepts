@@ -1,0 +1,9 @@
+/*
+ *  For styling AptBrowse demo page. Sass syntax: SCSS
+ */
+header, footer {
+  width: 600px;
+  margin: 0 auto;
+  text-align: center; }
+
+/*# sourceMappingURL=aptbrowse_demo.css.map */
