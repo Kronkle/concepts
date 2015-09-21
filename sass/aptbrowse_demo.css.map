@@ -1,6 +1,6 @@
 {
 "version": 3,
-"mappings": ";;;AAOA,cAAe;EACd,KAAK,EAHQ,KAAK;EAIlB,MAAM,EALE,MAAM;EAMd,UAAU,EAAE,MAAM",
+"mappings": ";;;AAaA,mBAAoB;EALnB,KAAK,EAHQ,KAAK;EAIlB,MAAM,EALE,MAAM;EAMd,UAAU,EAAE,MAAM",
 "sources": ["aptbrowse_demo.scss"],
 "names": [],
 "file": "aptbrowse_demo.css"

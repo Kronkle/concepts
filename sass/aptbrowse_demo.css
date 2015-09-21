@@ -1,7 +1,7 @@
 /*
  *  For styling AptBrowse demo page. Sass syntax: SCSS
  */
-header, footer {
+header, nav, footer {
   width: 600px;
   margin: 0 auto;
   text-align: center; }

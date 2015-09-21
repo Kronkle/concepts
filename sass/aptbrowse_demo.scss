@@ -5,8 +5,13 @@
 $center: 0 auto;
 $block-width: 600px;
 
-header, footer {
+@mixin blockAndCenter {
 	width:  $block-width;
 	margin: $center;
 	text-align: center;
 }
+
+header, nav, footer {
+	@include blockAndCenter;
+}
+
