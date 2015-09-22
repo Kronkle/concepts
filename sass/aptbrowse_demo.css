@@ -6,4 +6,16 @@ header, nav, footer {
   margin: 0 auto;
   text-align: center; }
 
+figure {
+  display: inline-block;
+  width: 45%;
+  margin: 0 auto;
+  text-align: center; }
+
+summary {
+  display: inline-block;
+  width: 45%;
+  margin: 0 auto;
+  text-align: center; }
+
 /*# sourceMappingURL=aptbrowse_demo.css.map */

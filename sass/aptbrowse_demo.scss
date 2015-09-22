@@ -2,12 +2,27 @@
  *  For styling AptBrowse demo page. Sass syntax: SCSS
  */
 
-$center: 0 auto;
+$centerMargin: 0 auto;
+$leftMargin: 100px;
 $block-width: 600px;
 
 @mixin blockAndCenter {
 	width:  $block-width;
-	margin: $center;
+	margin: $centerMargin;
+	text-align: center;
+}
+
+@mixin inlineBlockAndLeft {
+	display: inline-block;
+	width: 45%;
+	margin: $centerMargin;
+	text-align: center;
+}
+
+@mixin inlineBlockAndRight {
+	display: inline-block;
+	width: 45%;
+	margin: $centerMargin;
 	text-align: center;
 }
 
@@ -15,3 +30,10 @@ header, nav, footer {
 	@include blockAndCenter;
 }
 
+figure {
+	@include inlineBlockAndLeft;
+}
+
+summary {
+	@include inlineBlockAndRight;
+}
