@@ -2,9 +2,52 @@
  *  For styling AptBrowse demo page. Sass syntax: SCSS
  */
 
+
+/*********** Global Variables ***********/
+
 $centerMargin: 0 auto;
 $leftMargin: 100px;
+
+$articleHeight: 200px;
+$articleWidth: 100%;
+
+$figureImgWidth: 200px;
+$figureImgHeight: 200px;
+
 $block-width: 600px;
+
+
+/*********** Global CSS ***********/
+
+/* Don't allow padding and border to increase element width */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+   box-sizing: border-box;
+}
+
+/*
+ * Let's target IE to respect aspect ratios and sizes for img tags containing SVG files
+ *
+ * [1] IE9
+ * [2] IE10+
+ */
+/* 1 */
+
+.ie9 img[src*=".svg"] {
+	width: 100%;
+}
+/* 2 */
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  img[src*=".svg"] {
+  	height: auto;
+  	width: auto;
+    max-width: 200px;
+    max-height: 200px;
+  }
+}
+
+/*********** Mixins ***********/
 
 @mixin blockAndCenter {
 	width:  $block-width;
@@ -12,28 +55,59 @@ $block-width: 600px;
 	text-align: center;
 }
 
+/* Possibly condense the below mixins into one */
 @mixin inlineBlockAndLeft {
 	display: inline-block;
-	width: 45%;
+	width: 50%;
+	height: 200px;
 	margin: $centerMargin;
 	text-align: center;
+	font-size: 16px;
 }
 
 @mixin inlineBlockAndRight {
 	display: inline-block;
-	width: 45%;
+	width: 50%;
+	height: 200px;
 	margin: $centerMargin;
 	text-align: center;
+	font-size: 16px;
 }
+
+
+/*********** Elements ***********/
 
 header, nav, footer {
 	@include blockAndCenter;
 }
 
-figure {
-	@include inlineBlockAndLeft;
+/* Article elements contain information for one apartment listing */
+article {
+
+	height: $articleHeight;
+	width:	$articleWidth;
+
+	/* Include font-size here so inline-block elements below stack properly */
+	font-size: 0;
+
+	/* Figure elements contain an image for a particular apartment listing */
+	figure {
+		@include inlineBlockAndLeft;
+
+		img {
+			width: $figureImgWidth;
+		}
+	}
+
+	/* Summary elements contain details for a particular apartment listing */
+	summary {
+		@include inlineBlockAndRight;
+
+		p {
+			width: $figureImgWidth + 200px;
+			margin: 75px auto;
+		}
+	}
 }
 
-summary {
-	@include inlineBlockAndRight;
-}
+
