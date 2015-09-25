@@ -6,6 +6,9 @@
  *  For column widths, use %
  */
 /*********** Global Variables ***********/
+/*$figureImgWidth: 200px;
+$figureImgHeight: 200px;*/
+/* This doesn't currently change an apartment image */
 /*********** Global CSS ***********/
 /* Don't allow padding and border to increase element width */
 * {
@@ -34,7 +37,7 @@
 /* Possibly condense the below mixins into one */
 /*********** Elements ***********/
 header, nav, footer {
-  width: 800px;
+  max-width: 100%;
   margin: 0 auto;
   text-align: center;
   font-size: 1.5rem; }
@@ -47,31 +50,35 @@ h3 {
 
 /* Article elements contain information for one apartment listing */
 article {
-  height: 200px;
-  width: 100%;
+  max-height: 10%;
+  max-width: 100%;
   /* Include font-size here so inline-block elements below stack properly */
   font-size: 0;
+  overflow: hidden;
   /* Figure elements contain an image for a particular apartment listing */
   /* Summary elements contain details for a particular apartment listing */ }
   article figure {
     display: inline-block;
     width: 50%;
+    /*max-width: 100%;*/
     height: 200px;
     margin: 0 auto;
     text-align: center;
     font-size: 1rem; }
     article figure img {
-      width: 200px; }
+      max-height: 100%;
+      max-width: 50%; }
   article summary {
     display: inline-block;
     width: 50%;
+    /*max-width: 100%;*/
     height: 200px;
     margin: 0 auto;
     text-align: center;
     font-size: 1rem; }
     article summary p {
-      width: 200px;
-      margin: 75px auto;
+      width: 30%;
+      margin: 50px auto;
       font-size: 1rem; }
 
 /*# sourceMappingURL=aptbrowse_demo.css.map */
