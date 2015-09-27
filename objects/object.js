@@ -5,7 +5,19 @@
  * you can also make your own.
  */
 
-// Early object notation with the Object constructor
+/* 
+ * Objects can be created in several ways, including using literal
+ * notations and constructors. Constructors create objects and then 
+ * initialize properties, where each constructor is a function that has
+ * a "prototype" property that implements prototype-based inheritance
+ * and shared properties. When an object is created via a constructor, 
+ * the object is given an implicit reference to the value of it's 
+ * constructor's "prototype" property.
+ *
+ * Below is an example of an object that is created via the built-in
+ * Object constructor using a "new" expression. 
+ */
+
 var beer = new Object();
 
 // "name" and "style" are both called properties of beer
