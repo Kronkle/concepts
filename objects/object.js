@@ -1,18 +1,25 @@
-//In ECMA-262, objects are defined as unordered arrays which contain primitive data types that are stored as a series of name-value pairs
+/* 
+ * In ECMA-262, objects are defined as collections of properties, which are containers that can hold primitive values,
+ * functions, or even other objects. Each object property has zero or more attribute that define how a property can be
+ * used, and every object is a member of the built-in type Object. While there are predefined objects in the browser,
+ * you can also make your own.
+ */
 
-//Early object notation with the Object constructor
+// Early object notation with the Object constructor
 var beer = new Object();
 
 // "name" and "style" are both called properties of beer
+// Access an object property with dot-notation
+// The association between name, style, and their respective values are considered properties of the beer object
 beer.name = "PaleFish";
 beer.style = "IPA";
 
-// "sayName" is a method of beer
+// "sayName" is a method of beer, because the association is between a name and a function instead of a primitve value
 beer.sayName = function() {
 	alert(this.name);
 }
 
-//Object literal notation
+// Object literal notation
 var beer = {
 	name: "PaleFish";
 	style: "IPA";
@@ -22,7 +29,7 @@ var beer = {
 	}
 };
 
-//Factory pattern, to save time with creating multiple objects using the same interface
+// Factory pattern, to save time with creating multiple objects using the same interface
 function createBeer(name, style){
 	var b = new Object();
 	b.name = name;
@@ -30,7 +37,7 @@ function createBeer(name, style){
 	b.sayName = function() {
 		alert(this.name);
 	};
-	return b;
+
 }
 
 var beer1 = createBeer("Castle", "Stout");
@@ -67,7 +74,7 @@ console.log(puppy);
 
 // Prototypes determine properties and methods that associated objects inherit from
 
-//Every object holds a prototype property - add properties and methods to this for inheritance
+// Every object holds a prototype property - add properties and methods to this for inheritance
 
 function CraftBeer(beerName) {
     this.name = beerName;
@@ -81,15 +88,15 @@ var newBeer = new CraftBeer("Robust Ale");
 
 newBeer.printName();
 
-//Every object also holds a prototype attribute/prototype object which indicates the object that provides the inherited properties and methods
+// Every object also holds a prototype attribute/prototype object which indicates the object that provides the inherited properties and methods
 
-//Objects created with object literals have their prototype attribute set to Object.prototype
+// Objects created with object literals have their prototype attribute set to Object.prototype
 
 var beach = {name: "Sanibel"};
 console.log(beach.constructor);
 console.log(beach.prototype);
 
-//Objects created with constructors have their prototype attribute set to the constructor
+// Objects created with constructors have their prototype attribute set to the constructor
 
 function Island(islandName) {
     this.name = islandName;
@@ -99,7 +106,7 @@ var island = new Island("Sanibel Island");
 console.log(island.constructor);
 console.log(island.prototype);
 
-//In JS, prototype-based inheritance is implemented with the prototype property
+// In JS, prototype-based inheritance is implemented with the prototype property
 
 function Gym () {
     this.city = "Chapel Hill";
@@ -119,17 +126,17 @@ champGym.prototype = new Gym();
 
 var aGym = new champGym("Champion's Gym", "$50");
 
-//Print name from aGym prototype, which is champGym.prototype
+// Print name from aGym prototype, which is champGym.prototype
 
 console.log(aGym.name);
 
-//Use method from champGym prototype, which is Gym.prototype. This demonstrates the prototype chain, which extends from aGym to champGym to Gym.
+// Use method from champGym prototype, which is Gym.prototype. This demonstrates the prototype chain, which extends from aGym to champGym to Gym.
 
 aGym.showNameAndPrice;
 
-//Regarding the prototype chain mechanism, the JS runtime searches for an object's property first on the immediate object. If the property isn't found, the search moves up to the object's prototype and continues up the prototype chain until either the property is found or it isn't (in which case undefined is returned)
+// Regarding the prototype chain mechanism, the JS runtime searches for an object's property first on the immediate object. If the property isn't found, the search moves up to the object's prototype and continues up the prototype chain until either the property is found or it isn't (in which case undefined is returned)
 
-//All objects in JS inherit properties and methods from Object.prototype
+// All objects in JS inherit properties and methods from Object.prototype
 
 
 
