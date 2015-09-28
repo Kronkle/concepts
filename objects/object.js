@@ -20,18 +20,30 @@
 
 var beer = new Object();
 
-// "name" and "style" are both called properties of beer
-// Access an object property with dot-notation
-// The association between name, style, and their respective values are considered properties of the beer object
+/* 
+ * Since the beer object has been created and initialized by the Object
+ * constructor, we can now add custom properties to it with dot notation.
+ * "name" and "style" are both properties of beer, and they can be accessed (like other
+ * object properties) via dot-notation.
+ */
 beer.name = "PaleFish";
 beer.style = "IPA";
 
-// "sayName" is a method of beer, because the association is between a name and a function instead of a primitve value
+/* 
+ * Remember that object properties can be more than just primitive values. 
+ * Below, we create the "sayName" function that alerts the "name" property of 
+ * this particular Object instance (beer) via the "this" keyword.
+ */ 
 beer.sayName = function() {
 	alert(this.name);
 }
 
-// Object literal notation
+/* NOTE: Section 6.1.7 details how accessor properties behave for ECMAScript objects */
+
+/* 
+ * The ECMAScript spec details how objects can be created using literal notation
+ * too - in the form of zero or more pairs of key-value pairs enclosed in curly braces.
+ */
 var beer = {
 	name: "PaleFish";
 	style: "IPA";
