@@ -9,6 +9,8 @@
     "body-parser": "^1.13.2",
     "method-override": "^2.3.3"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "gulp": "^3.9.0"
+  },
   "main": "lodash_tutorial_server.js"
 }
