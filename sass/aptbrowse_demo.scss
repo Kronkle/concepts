@@ -10,21 +10,14 @@
 /*********** Global Variables ***********/
 
 $centerMargin: 0 auto;
-$leftMargin: 100px;
 
-$articleHeight: 10%;
+$articleHeight: 50%;
 $articleWidth: 100%;
 
-/*$figureImgWidth: 200px;
-$figureImgHeight: 200px;*/
-
-$figureImgWidth: 30%;
-
-/* This doesn't currently change an apartment image */
-$figureImgHeight: 500%;
+$figureImgWidth: 200px;
+$figureImgHeight: 200px;
 
 $block-width: 100%;
-
 
 /*********** Global CSS ***********/
 
@@ -64,27 +57,15 @@ $block-width: 100%;
 	text-align: center;
 }
 
-/* Possibly condense the below mixins into one */
-@mixin inlineBlockAndLeft {
+@mixin inlineBlockHalfColumn {
 	display: inline-block;
 	width: 50%;
-	/*max-width: 100%;*/
 	height: 200px;
 	margin: $centerMargin;
+	vertical-align: top;
 	text-align: center;
-	font-size: 1rem;
+	font-size: 100rem;
 }
-
-@mixin inlineBlockAndRight {
-	display: inline-block;
-	width: 50%;
-	/*max-width: 100%;*/
-	height: 200px;
-	margin: $centerMargin;
-	text-align: center;
-	font-size: 1rem;
-}
-
 
 /*********** Elements ***********/
 
@@ -114,17 +95,18 @@ article {
 
 	/* Figure elements contain an image for a particular apartment listing */
 	figure {
-		@include inlineBlockAndLeft;
+		@include inlineBlockHalfColumn;
+		font-size: 0;
 
 		img {
-			max-height: 100%;
-			max-width: 50%;
+			width: 100%;
+			height: 100%;
 		}
 	}
 
 	/* Summary elements contain details for a particular apartment listing */
 	summary {
-		@include inlineBlockAndRight;
+		@include inlineBlockHalfColumn;
 		p {
 			width: $figureImgWidth;
 			margin: 50px auto;
