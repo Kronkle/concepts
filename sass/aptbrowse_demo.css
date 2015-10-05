@@ -2,8 +2,7 @@
  *  For styling AptBrowse demo page. Sass syntax: SCSS
  * 
  *  Design Notes:
- *  Use rems for everything except for column widths
- *  For column widths, use %
+ *  TODO: Moving towards more pixels - continue research on the web
  */
 /*********** Global Variables ***********/
 /*********** Global CSS ***********/
@@ -36,17 +35,17 @@ header, nav, footer {
   max-width: 100%;
   margin: 0 auto;
   text-align: center;
-  font-size: 1.5rem; }
+  font-size: 21px; }
 
 footer {
-  margin-top: 5rem; }
+  margin-top: 70px; }
 
 h3 {
-  font-size: 1.5rem; }
+  font-size: 21px; }
 
 /* Article elements contain information for one apartment listing */
 article {
-  max-height: 50%;
+  max-height: 200px;
   max-width: 100%;
   /* Include font-size here so inline-block elements below stack properly */
   font-size: 0;
@@ -60,7 +59,6 @@ article {
     margin: 0 auto;
     vertical-align: top;
     text-align: center;
-    font-size: 100rem;
     font-size: 0; }
     article figure img {
       width: 100%;
@@ -71,11 +69,10 @@ article {
     height: 200px;
     margin: 0 auto;
     vertical-align: top;
-    text-align: center;
-    font-size: 100rem; }
+    text-align: center; }
     article summary p {
       width: 200px;
       margin: 50px auto;
-      font-size: 1rem; }
+      font-size: 14px; }
 
 /*# sourceMappingURL=aptbrowse_demo.css.map */
