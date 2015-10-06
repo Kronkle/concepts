@@ -37,16 +37,23 @@ header, nav, footer {
   text-align: center;
   font-size: 21px; }
 
-footer {
-  margin-top: 70px; }
-
+/* Style for the "AptBrowse" header */
 h3 {
   font-size: 21px; }
+
+span {
+  display: inline-block;
+  width: 100px; }
+
+/* Style for footer element */
+footer {
+  margin-top: 40px; }
 
 /* Article elements contain information for one apartment listing */
 article {
   max-height: 200px;
   max-width: 100%;
+  margin-bottom: 20px;
   /* Include font-size here so inline-block elements below stack properly */
   font-size: 0;
   overflow: hidden;
@@ -72,7 +79,7 @@ article {
     text-align: center; }
     article summary p {
       width: 200px;
-      margin: 50px auto;
+      margin: 30px auto;
       font-size: 14px; }
 
 /*# sourceMappingURL=aptbrowse_demo.css.map */

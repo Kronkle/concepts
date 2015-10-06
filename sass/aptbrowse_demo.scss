@@ -72,12 +72,31 @@ header, nav, footer {
 	font-size: 21px;
 }
 
-footer {
-	margin-top: 70px;
-}
-
+/* Style for the "AptBrowse" header */
 h3 {
 	font-size: 21px;
+}
+
+span {
+	display: inline-block;
+	width: 100px;
+}
+
+#zip {
+	
+}
+
+#reg {
+	
+}
+
+#log {
+	
+}
+
+/* Style for footer element */
+footer {
+	margin-top: 40px;
 }
 
 /* Article elements contain information for one apartment listing */
@@ -85,6 +104,7 @@ article {
 	
 	max-height: $articleHeight;
 	max-width:	$articleWidth;
+	margin-bottom: 20px;
 
 	/* Include font-size here so inline-block elements below stack properly */
 	font-size: 0;
@@ -107,7 +127,7 @@ article {
 		@include inlineBlockHalfColumn;
 		p {
 			width: $figureImgWidth;
-			margin: 50px auto;
+			margin: 30px auto;
 			font-size: 14px;
 		}
 	}
