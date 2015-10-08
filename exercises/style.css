@@ -1,0 +1,22 @@
+a {
+	display: block;
+	text-decoration: none;
+}
+
+a:hover span {
+	text-decoration:underline;
+}
+
+img {
+	height: auto;
+	width: auto;
+	vertical-align: middle;
+}
+
+
+span {
+	display: inline-block;
+	width: 30%;
+	vertical-align: middle;
+	
+}
