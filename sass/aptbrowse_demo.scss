@@ -2,7 +2,7 @@
  *  For styling AptBrowse demo page. Sass syntax: SCSS
  * 
  *  Design Notes:
- *  TODO: Moving towards more pixels - continue research on the web
+ * 	Use % or em/rem where necesary to stay responsive
  */
 
 
@@ -25,6 +25,10 @@ $block-width: 100%;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
    box-sizing: border-box;
+}
+
+body {
+	font-family: 'Asap', sans-serif;
 }
 
 /*
