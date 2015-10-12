@@ -13,7 +13,7 @@ $centerMargin: 0 auto;
 $articleHeight: 200px;
 $articleWidth: 100%;
 
-$figureImgWidth: 200px;
+$figureImgWidth: 300px;
 $figureImgHeight: 200px;
 
 $block-width: 100%;
@@ -153,7 +153,8 @@ article {
 			width: $figureImgWidth;
 			max-width: 100%;
 			margin: 30px auto;
-			font-size: 14px;
+			font-size: 18px;
+			line-height: 30%;
 		}
 	}
 }
