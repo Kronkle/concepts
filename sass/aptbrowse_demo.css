@@ -13,7 +13,8 @@
   box-sizing: border-box; }
 
 body {
-  font-family: 'Asap', sans-serif; }
+  font-family: 'Asap', sans-serif;
+  font-weight: 400; }
 
 /*
  * Let's target IE to respect aspect ratios and sizes for img tags containing SVG files
@@ -86,6 +87,7 @@ article {
     margin: 0 auto;
     vertical-align: top;
     text-align: center;
+    padding: 0;
     font-size: 0; }
     article figure img {
       max-width: 100%;
@@ -96,12 +98,11 @@ article {
     height: 200px;
     margin: 0 auto;
     vertical-align: top;
-    text-align: center; }
+    text-align: center;
+    padding: 0; }
     article summary p {
-      width: 300px;
-      max-width: 100%;
-      margin: 30px auto;
-      font-size: 18px;
-      line-height: 30%; }
+      max-width: 300px;
+      margin: 10px auto;
+      font-size: 18px; }
 
 /*# sourceMappingURL=aptbrowse_demo.css.map */

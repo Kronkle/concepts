@@ -29,6 +29,7 @@ $block-width: 100%;
 
 body {
 	font-family: 'Asap', sans-serif;
+	font-weight: 400;
 }
 
 /*
@@ -67,6 +68,7 @@ body {
 	margin: $centerMargin;
 	vertical-align: top;
 	text-align: center;
+	padding: 0;
 }
 
 /*********** Elements ***********/
@@ -149,12 +151,11 @@ article {
 	/* Summary elements contain details for a particular apartment listing */
 	summary {
 		@include inlineBlockHalfColumn;
+
 		p {
-			width: $figureImgWidth;
-			max-width: 100%;
-			margin: 30px auto;
+			max-width: $figureImgWidth;
+			margin: 10px auto;
 			font-size: 18px;
-			line-height: 30%;
 		}
 	}
 }
