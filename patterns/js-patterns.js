@@ -58,3 +58,22 @@ car.getModel();
  * Explanation 2 - The prototype pattern involves creating objects
  * with the same template of an existing object via cloning.
  */
+
+// Example 3 - Composite Pattern
+$('.myClass').addClass('selected');
+$('#myId').addClass('selected');
+
+$("table tbody #button").on("click", function(event){
+	alert("Clicked a tr button");
+});
+
+$('#buttonTwo').on("click", function(event){
+	alert("Clicked a lone button");
+})
+
+/* 
+ * Explanation 3 - The composite patterns involves treating an individual
+ * object in the same manner as a group of those objects. For example, jQuery
+ * provides a consistent API for dealing with a single DOM element or multiple
+ * DOM elements.
+ */
