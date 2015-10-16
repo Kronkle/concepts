@@ -77,3 +77,17 @@ $('#buttonTwo').on("click", function(event){
  * provides a consistent API for dealing with a single DOM element or multiple
  * DOM elements.
  */
+
+// Example 4 - Facade Pattern
+
+$(document).ready(function(){
+//Code here
+});
+
+/*
+ * Explanation 4 - the Facade Pattern provides a simple
+ * interface to the user while hiding its internal
+ * complexity. For example, jQuery's document.ready
+ * function accounts for various browser inconsistencies 
+ * under the hood.
+*/
