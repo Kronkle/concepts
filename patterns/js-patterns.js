@@ -90,7 +90,7 @@ $(document).ready(function(){
  * complexity. For example, jQuery's document.ready
  * function accounts for various browser inconsistencies 
  * under the hood.
-*/
+ */
 
 // Example 5 - Observer Pattern
 
@@ -106,3 +106,25 @@ $("#button").click(function() {
  * element to notify an observer when the element
  * is clicked to trigger a specific action.
  */ 
+
+// Example 6 - Mediator Pattern
+$("#vote").on('click', function(e) {
+	e.preventDefault();
+	var voteChoice = "Bernie";
+	ballotMachine.publish("submitVote", voteChoice);
+});
+
+var submitVote = function(voteChoice) {
+	alert("Vote for " + voteChoice + " submitted");
+};
+
+ballotMachine.subscribe("submitVote", submitVote);
+
+
+/* 
+ * Explanation 6 - the Mediator Pattern involves using a single
+ * shared subject that acts as a liason between objects. For example,
+ * a Ballot Machine object could act as a mediator/controller for 
+ * handling actions when a vote for Bernie is submitted.
+ */
+
