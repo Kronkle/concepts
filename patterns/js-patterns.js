@@ -91,3 +91,18 @@ $(document).ready(function(){
  * function accounts for various browser inconsistencies 
  * under the hood.
 */
+
+// Example 5 - Observer Pattern
+
+$("#button").click(function() {
+    alert("Button has been clicked");
+});
+
+/*
+ * Explanation 5 - the Observer Pattern involves a subject
+ * maintaining a list of observers and notifying them 
+ * after specific events take place. For example, 
+ * a click handler observer can be added to a specific DOM
+ * element to notify an observer when the element
+ * is clicked to trigger a specific action.
+ */ 
