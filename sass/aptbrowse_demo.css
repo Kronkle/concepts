@@ -13,8 +13,7 @@
   box-sizing: border-box; }
 
 body {
-  font-family: 'Asap', sans-serif;
-  font-weight: 400; }
+  font-family: 'Roboto', sans-serif; }
 
 /*
  * Let's target IE to respect aspect ratios and sizes for img tags containing SVG files
@@ -72,6 +71,8 @@ footer {
 
 /* Article elements contain information for one apartment listing */
 article {
+  border: 1px solid #111111;
+  border-radius: 25px;
   max-height: 200px;
   max-width: 100%;
   margin-bottom: 20px;
@@ -90,8 +91,10 @@ article {
     padding: 0;
     font-size: 0; }
     article figure img {
+      padding: 10px;
       max-width: 100%;
-      max-height: 100%; }
+      max-height: 100%;
+      min-height: 100%; }
   article summary {
     display: inline-block;
     width: 50%;
