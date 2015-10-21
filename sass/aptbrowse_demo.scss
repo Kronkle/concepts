@@ -70,6 +70,16 @@ body {
 	padding: 0;
 }
 
+@mixin inlineBlockHalfColumnRight {
+	display: inline-block;
+	width: 50%;
+	height: 200px;
+	margin: $centerMargin;
+	vertical-align: top;
+
+	padding: 0;
+}
+
 /*********** Elements ***********/
 
 header, nav, footer {
@@ -158,7 +168,7 @@ article {
 
 	/* Summary elements contain details for a particular apartment listing */
 	summary {
-		@include inlineBlockHalfColumn;
+		@include inlineBlockHalfColumnRight;
 
 		p {
 			max-width: $figureImgWidth;
