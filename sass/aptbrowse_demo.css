@@ -97,7 +97,7 @@ article {
       min-height: 100%; }
   article summary {
     display: inline-block;
-    width: 50%;
+    width: 25%;
     height: 200px;
     margin: 0 auto;
     vertical-align: top;

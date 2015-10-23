@@ -76,7 +76,15 @@ body {
 	height: 200px;
 	margin: $centerMargin;
 	vertical-align: top;
+	padding: 0;
+}
 
+@mixin inlineBlockQuarterColumn {
+	display: inline-block;
+	width: 25%;
+	height: 200px;
+	margin: $centerMargin;
+	vertical-align: top;
 	padding: 0;
 }
 
@@ -168,7 +176,7 @@ article {
 
 	/* Summary elements contain details for a particular apartment listing */
 	summary {
-		@include inlineBlockHalfColumnRight;
+		@include inlineBlockQuarterColumn;
 
 		p {
 			max-width: $figureImgWidth;
