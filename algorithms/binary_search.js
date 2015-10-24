@@ -32,3 +32,9 @@ var binarySearch = function(numbers, target, first, last) {
 };
 
 console.log(binarySearch(numbers, 5, 0, numbers.length - 1));
+
+// Create a wrapper for binarySearch function
+var binarySearchWrapper = function(numbers, target) {
+    // We could also do error checking here 
+    return binarySearch(numbers, target, 0, numbers.length-1);
+}
