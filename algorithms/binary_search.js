@@ -36,5 +36,9 @@ console.log(binarySearch(numbers, 5, 0, numbers.length - 1));
 // Create a wrapper for binarySearch function
 var binarySearchWrapper = function(numbers, target) {
     // We could also do error checking here 
+    if (numbers.length <= 0) {
+        console.log("array length is not sufficient");
+        return;
+    }
     return binarySearch(numbers, target, 0, numbers.length-1);
 }
