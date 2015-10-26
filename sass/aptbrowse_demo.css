@@ -15,23 +15,6 @@
 body {
   font-family: 'Roboto', sans-serif; }
 
-/*
- * Let's target IE to respect aspect ratios and sizes for img tags containing SVG files
- *
- * [1] IE9
- * [2] IE10+
- */
-/* 1 */
-.ie9 img[src*=".svg"] {
-  width: 100%; }
-
-/* 2 */
-@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
-  img[src*=".svg"] {
-    height: auto;
-    width: auto;
-    max-width: 200px;
-    max-height: 200px; } }
 /*********** Mixins ***********/
 /*********** Elements ***********/
 header, nav, footer {
@@ -97,7 +80,7 @@ article {
       min-height: 100%; }
   article summary {
     display: inline-block;
-    width: 25%;
+    width: 50%;
     height: 200px;
     margin: 0 auto;
     vertical-align: top;
