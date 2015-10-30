@@ -23,9 +23,13 @@ header, nav, footer {
   text-align: center;
   font-size: 21px; }
 
-/* Style for the "AptBrowse" header */
+/* Style for the "Results" header */
 h3 {
   font-size: 21px; }
+
+/* Style for the "Filter By" header */
+h4 {
+  margin-left: 90%; }
 
 nav {
   width: 100%; }
