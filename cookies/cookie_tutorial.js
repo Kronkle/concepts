@@ -81,6 +81,48 @@ cookieView.prototype.showCookies = function() {
 // Initialize directory view
 var cookieView = new cookieView;
 
+/*
+Temp location for web workers tutorial
+
+A web worker is JS code that runs in a background thread without affecting the performance of the UI.
+
+First, create the external JS worker code
+Check for browser compatibility:
+if(typeof(Worker) !== "undefined"){
+    console.log("web workers are supported!");
+} else {
+    console.log("web workers aren't supported");
+}
+
+Create a function to count down from 10 and pass a message each iteration to the HTML inline script that creates this worker with postMessage
+function countdown(){
+    var count = 10;
+
+    while(count > 0){
+        postMessage(count);
+        count--;
+        setTimeout("countdown()",500);
+    }
+
+}
+
+countdown();
+
+Create the web worker object in the embedded HTML script
+
+The constructor takes the name of the external worker script 
+if(typeof(w) == "undefined") {
+    w = new Worker("countdown_worker.js");
+}
+
+When web worker posts a message, alter the element with ID "result"
+w.onmessage = function(event){
+    document.getElementById("result").innerHTML = event.data;
+};
+
+
+*/
+
 
 
 
