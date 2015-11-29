@@ -108,6 +108,11 @@ function countdown(){
 
 countdown();
 
+If web worker object sends a message, return it. You could also implement JSON message passing here, where copies of JSON objects are  encoded/decoded on either end
+self.addEventListener('message', function(e) {
+  self.postMessage(e.data);
+}, false);
+
 Create the web worker object in the embedded HTML script
 
 The constructor takes the name of the external worker script 
@@ -119,6 +124,15 @@ When web worker posts a message, alter the element with ID "result"
 w.onmessage = function(event){
     document.getElementById("result").innerHTML = event.data;
 };
+
+You can also add a traditional event listener - both web worker and web worker object will have access to Event.data
+worker.addEventListener('message', function(e) {
+  console.log('Worker said: ', e.data);
+}, false);
+
+A worker can be started by sending it a message via postMessage
+worker.postMessage('Hello World'); // Send data to our worker.
+
 
 
 */
