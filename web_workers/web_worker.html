@@ -1,0 +1,38 @@
+<html>
+
+<head>
+<script>
+	// Create the web worker object in the embedded HTML script
+
+	// The constructor takes the name of the external worker script 
+	if (typeof(w) == "undefined") {
+	    w = new Worker("web_workers.js");
+	}
+
+	// When web worker posts a message, append the result to the body
+	w.onmessage = function(event){
+		var message = document.createElement("p");
+		var node = document.createTextNode(event.data);
+		message.appendChild(node);
+		document.body.appendChild(message);
+	};
+
+	// You can also add a traditional event listener - both web worker and web worker object will have access to Event.data
+	worker.addEventListener('message', function(e) {
+	  console.log('Worker said: ', e.data);
+	}, false);
+
+	// A worker can be started by sending it a message via postMessage
+	worker.postMessage('Hello World'); // Send data to our worker.
+</script>
+
+</head>
+
+<body>
+
+<p id="result"></p>
+
+</body>
+
+
+</html>
