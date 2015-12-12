@@ -1,4 +1,4 @@
-// Generated on 2015-12-10 using
+// Generated on 2015-12-12 using
 // generator-webapp 1.1.0
 'use strict';
 
@@ -46,10 +46,6 @@ module.exports = function (grunt) {
       },
       gruntfile: {
         files: ['Gruntfile.js']
-      },
-      sass: {
-        files: ['<%= config.app %>/styles/{,*/}*.{scss,sass}'],
-        tasks: ['sass', 'postcss']
       },
       styles: {
         files: ['<%= config.app %>/styles/{,*/}*.css'],
@@ -164,25 +160,6 @@ module.exports = function (grunt) {
       }
     },
 
-    // Compiles Sass to CSS and generates necessary files if requested
-    sass: {
-      options: {
-        sourceMap: true,
-        sourceMapEmbed: true,
-        sourceMapContents: true,
-        includePaths: ['.']
-      },
-      dist: {
-        files: [{
-          expand: true,
-          cwd: '<%= config.app %>/styles',
-          src: ['*.{scss,sass}'],
-          dest: '.tmp/styles',
-          ext: '.css'
-        }]
-      }
-    },
-
     postcss: {
       options: {
         map: true,
@@ -208,10 +185,6 @@ module.exports = function (grunt) {
       app: {
         src: ['<%= config.app %>/index.html'],
         ignorePath: /^(\.\.\/)*\.\./
-      },
-      sass: {
-        src: ['<%= config.app %>/styles/{,*/}*.{scss,sass}'],
-        ignorePath: /^(\.\.\/)+/
       }
     },
 
@@ -338,23 +311,13 @@ module.exports = function (grunt) {
             'styles/fonts/{,*/}*.*'
           ]
         }]
-      }
-    },
-
-    // Generates a custom Modernizr build that includes only the tests you
-    // reference in your app
-    modernizr: {
-      dist: {
-        devFile: 'bower_components/modernizr/modernizr.js',
-        outputFile: '<%= config.dist %>/scripts/vendor/modernizr.js',
-        files: {
-          src: [
-            '<%= config.dist %>/scripts/{,*/}*.js',
-            '<%= config.dist %>/styles/{,*/}*.css',
-            '!<%= config.dist %>/scripts/vendor/*'
-          ]
-        },
-        uglify: true
+      },
+      styles: {
+        expand: true,
+        dot: true,
+        cwd: '<%= config.app %>/styles',
+        dest: '.tmp/styles/',
+        src: '{,*/}*.css'
       }
     },
 
@@ -362,14 +325,15 @@ module.exports = function (grunt) {
     concurrent: {
       server: [
         'babel:dist',
-        'sass'
+        'copy:styles'
       ],
       test: [
-        'babel'
+        'babel',
+        'copy:styles'
       ],
       dist: [
         'babel',
-        'sass',
+        'copy:styles',
         'imagemin',
         'svgmin'
       ]
@@ -423,7 +387,6 @@ module.exports = function (grunt) {
     'cssmin',
     'uglify',
     'copy:dist',
-    'modernizr',
     'filerev',
     'usemin',
     'htmlmin'
