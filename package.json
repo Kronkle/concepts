@@ -10,6 +10,7 @@
     "method-override": "^2.3.3"
   },
   "devDependencies": {
+    "babel-cli": "^6.4.5",
     "gulp": "^3.9.0"
   },
   "main": "lodash_tutorial_server.js"
